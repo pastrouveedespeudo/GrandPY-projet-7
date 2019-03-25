@@ -11,15 +11,14 @@
 
 # Voici un site de recherche d'adresse se basant sur geocode, wikimedia et google api
 
-#vous trouverez ci-joins des plusieurs méthodes afin de faire la meme chose. Le projet est basé sur geocode mais dans le dossier alternative
-vous pourrez trouver la méthode pour googleapi ainsi qu'une technique de scrapping web de wikipédia 
+#vous trouverez ci-joins plusieurs méthodes afin de faire la meme chose. Le projet est basé sur geocode mais les consignes sont de se servir de googlemapapi dans le dossier alternative vous pourrez trouver la méthode pour googlemapapi ainsi qu'une technique de scrapping web javascript de wikipédia 
 
 #les fichier test sont a la racine (mocks, tests unitaires, et TDD)
 
 #le fichier static contient les image le css et l'html
 
 
-#Le site web se décompose de deux fonctionnalités un le site principal deux un tchat avec des images sous python et js
+#Le site web se décompose de deux fonctionnalités premièrement le site principal deuxièmement un tchat avec des images sous python et js
 
 
 
