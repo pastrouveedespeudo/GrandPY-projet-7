@@ -20,6 +20,7 @@
 
 #Le site web se décompose de deux fonctionnalités premièrement le site principal deuxièmement un tchat avec des images sous python et js
 
+#a noter que le tchat est tres peu alimenté et que pour une conversation maximale il faut commencer par salut ou salut ca va ?
 
 
 # Installer le programme
