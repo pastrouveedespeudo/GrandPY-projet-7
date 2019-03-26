@@ -7,14 +7,15 @@ class TTD(unittest.TestCase):
         """Here we delete ponctuation"""
         
         #make a punctuation list
+        self.assertEqual(script.no_ponctuation("bonjour ?"), "bonjour")
         #walk through each entrance element
         #compare the elements of the punctuation list with the entry
+        #visulize last caractere is it " "? yes don't return it
+        self.assertEqual(script.no_ponctuation(" "), " ")
         #remove punctuation
 
         self.assertEqual(script.no_ponctuation("bonjour ?"), "bonjour")
         
-    def test_hello(self):
-        self.assertEqual(script.hello_world(), 'hello world')        
 
 
     def test_search_dico(self):
@@ -24,7 +25,8 @@ class TTD(unittest.TestCase):
         #from last step we searching nm or nf
         #we return it
         
-        self.assertEqual(script.search_dico("l'ardoise"), "nm")
+        self.assertEqual(script.search_dico("l'ardoise"), "f")
+        self.assertEqual(script.search_dico("l'antartique"), "nm")
 
 
     def test_apostrophe(self):
@@ -32,9 +34,32 @@ class TTD(unittest.TestCase):
         
         #we check the input sentence
         #we go through the list
-        #we search " ' "
+        self.assertEqual(script.apostrohpe("connais la adresse d'openclassrooms"),
+                         "['connais', 'la', 'adresse', 'd'openclassrooms']")
+        #indexing it
+        self.assertEqual(script.apostrohpe("connais la adresse d'openclassrooms"),
+                         "[3]")
+        #we search " ' " if we founding it we isolate it
+        self.assertEqual(script.apostrohpe("connais la adresse d'openclassrooms"),
+                         '["d\'openclassrooms"]')
+        #we delete it
+        self.assertEqual(script.apostrohpe("connais la adresse d'openclassrooms"),
+                         "['d openclassrooms']")
+        #transfom it like multiple element
+        self.assertEqual(script.apostrohpe("connais la adresse d'openclassrooms"),
+                         "[['d', 'openclassrooms']]")       
         #if search_dico == nm : we replace ' by e
         #or a if search_dico == nf
+        self.assertEqual(script.apostrohpe("connais la adresse d'openclassrooms"),
+                         ['de openclassrooms'])
+        
+        self.assertEqual(script.apostrohpe("connais la adresse d'openclassrooms"),
+                         'de openclassrooms')
+
+        #join it !
+        self.assertEqual(script.apostrohpe("connais la adresse l'ardoise"),
+                            
+        #testing it without sentence                
         self.assertEqual(script.apostrohpe("l'ardoise"), "l'ardoise")
 
 
