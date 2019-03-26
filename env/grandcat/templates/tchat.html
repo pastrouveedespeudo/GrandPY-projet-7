@@ -1,0 +1,59 @@
+{%extends "core/default.html"%}
+
+{% block body %}
+
+<body>
+
+  <div class="masthead">
+    <div class="masthead-bg" style="border:#cd9557;"></div>
+    <div class="container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="row">  
+        </div>
+    </div>
+    <br>
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-12 my-auto">
+          <div class="masthead-content text-white py-5 py-md-0">
+            <form id="form_raise">
+             <div class="container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                 <div class="row">
+                      <div id="discussion" class="col-xs-offset-3 col-sm-offset-0 col-md-offset-0 col-lg-5"
+                        style="border: 1px solid black; height:290px; width:100%;overflow:auto;">
+                      </div>
+                      <div class="col-xs-0 hidden-sm hidden-md col-lg-1">
+                      </div>
+                      <div id="image" class="col-xs-offset-3 col-sm-offset-0 col-md-offset-0 col-lg-6"
+                        style="border: 1px solid black; height:450px; width:100%;overflow:scroll;>
+                    </div>
+                     <input type="hidden" value="effacer" name="effacer" id="hiddeneffacer"/>
+                </div>
+            </div>
+            </form>
+            <br>
+            <form id="form_data">
+                <div class="container col-xs-12 col-sm-12 col-md-12 col-lg-12 style="text-align:center;" id="ud">
+                    <div class="row">
+                        <input type="text" style="width:84%; text-align:center; border-radius:10px; border:2px solid black; height:50px;
+                        font-size: 1.3vw;" id="idRecupInfo">
+                        <br>
+                        <input type="submit" id="sub" value="Enter" id="idButtonInput"
+                            style="width:15%; border:2px solid black; height:50px; border-radius:10px; font-size: 1.2vw;"/>
+                   </div>
+                </div>
+             </form>                
+        </div>
+    </div>
+            <div id="monCadreAlert"></div>  
+ 
+            <div id = "heure" class ="heure"></div>
+
+            <div class="divFavorite" id="divFavorite"></div>
+          
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="static/styles/js/tchhhat.js"></script>
+{% endblock body %}

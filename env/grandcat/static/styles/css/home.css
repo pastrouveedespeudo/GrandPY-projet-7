@@ -1,0 +1,169 @@
+#logoo{
+  margin-top:10px;
+  border-radius:10px;
+  width:15%;
+  margin-left:10px;
+  display: flex;
+  min-width:30px;
+  min-height:30px;
+  border:3px solid rgb(0, 0, 0);
+}
+
+#tourne{
+  margin-top:10px;
+  border-radius:10px;
+  width:30%;
+  float:right;
+  display: flex;
+  min-width:50px;
+  min-height:50px;
+  max-width:120px;
+  border:3px solid black;
+
+  max-height:200px;
+}
+
+#map{
+  width:100%;
+  text-align:center;
+}
+
+#payschat{
+  width:25%;
+  height:70%;
+
+}
+
+#monCadreWiki{
+  border: 1px solid black;
+  width: 100%;
+  overflow:auto;
+  height:150px;
+  float:left;
+}
+
+#monCadre{
+  position:relative;
+  border: 1px solid black;
+  width: 100%;
+  height:150px;
+  overflow:auto;
+  float:left;
+}
+
+#sub{
+  margin-left:auto;
+}
+
+html{height:100%}
+
+body{
+  height:100%;
+  position:relative;
+  font-family:'Source Sans Pro';
+  background-color:#cd9557;
+}
+
+
+h1{
+  font-family:Merriweather;
+  font-weight:700;
+  font-size: 1.75vw;
+}
+
+
+h2,h3,h4,h5,h6{
+  font-family:Merriweather;
+  font-weight:700;
+  font-size: 1.6vw;
+}
+
+.masthead{position:relative;overflow:hidden;padding-bottom:5rem;z-index:2}
+
+.masthead .masthead-bg{
+
+#map{
+  width:100%;
+  margin-top:auto;
+}
+
+#payschat{
+  width:20%;
+  height:80%;
+}
+
+#monCadreWiki{
+  border: 2px solid black;
+  width: 100%;
+  overflow:scroll;
+  height:150px;
+  float:left;
+}
+
+#monCadre{
+  position:relative;
+  border:2px solid black;
+  width: 100%;
+  height:150px;
+  overflow:scroll;
+  float:left;
+}
+
+#supp{
+  width:30%;
+  max-width:100px;
+}
+
+form{
+    text-align:center;
+}
+
+p{
+    text-align:center;
+}
+
+#blockinput{
+  text-align:center;
+}
+
+#idRecupInfo{
+  width:84%; 
+  text-align:center; 
+  border-radius:10px; 
+  border:2px solid black; 
+  height:50px;
+  font-size: 2.3vw;
+
+}
+
+#image1{
+  float:right;
+}
+
+#c{
+ float:left;
+ color:red;
+}
+
+.formPseudo{
+  margin-top:-200;
+  margin-right:910px;
+}
+
+#divFavorite{
+  margin-right:0 auto;
+}
+
+#inp{
+  float:left;
+}
+
+}
+
+#idButtonInput{
+  width:15%;
+  border:2px solid black; 
+  height:50px; 
+  border-radius:10px; 
+  font-size: 2.2vw;
+}
