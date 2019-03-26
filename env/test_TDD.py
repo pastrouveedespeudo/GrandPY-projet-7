@@ -25,8 +25,8 @@ class TTD(unittest.TestCase):
         #from last step we searching nm or nf
         #we return it
         
-        self.assertEqual(script.search_dico("l'ardoise"), "f")
-        self.assertEqual(script.search_dico("l'antartique"), "nm")
+        self.assertEqual(script.search_dico("ardoise"), "nf")
+        self.assertEqual(script.search_dico("antartique"), "nm")
 
 
     def test_apostrophe(self):
@@ -57,7 +57,7 @@ class TTD(unittest.TestCase):
                          'de openclassrooms')
 
         #join it !
-        self.assertEqual(script.apostrohpe("connais la adresse l'ardoise"),
+        self.assertEqual(script.apostrohpe("connais la adresse l'ardoise"),'la ardoise')
                             
         #testing it without sentence                
         self.assertEqual(script.apostrohpe("l'ardoise"), "l'ardoise")
@@ -65,12 +65,18 @@ class TTD(unittest.TestCase):
 
     def test_parsing_text(self):
         """If the catchphrase is we just take the last word"""
-
-        #search match with catchpgrase
+        #we splite entrance
+        self.assertEqual(script.apostrohpe("connais la adresse de openclassrooms"),
+                         "['connais', 'la', 'adresse', 'de', 'openclassrooms']")
+        #make it like different list into list
+        self.assertEqual(script.apostrohpe("connais la adresse de openclassrooms"),
+                         "[['connais'], ['la'], ['adresse'], ['de'], ['openclassrooms']]")                     
+        #take each element from each list
+        self.assertEqual(script.apostrohpe("connais la adresse de openclassrooms"),
+                         "['c,o,n,n,a,i,s', 'l,a', 'a,d,r,e,s,s,e', 'd,e', 'o,p,e,n,c,l,a,s,s,r,o,o,m,s']")                     
         #we take the last word into list
-    
-        self.assertEqual(script.parsing_text("Salut GrandPY  Est-ce que tu connais la adresse de Crest"),
-                         "Crest")
+        self.assertEqual(script.parsing_text("Salut GrandPY  Est-ce que tu connais la adresse de openclassrooms"),
+                         "openclassrooms")
 
 
     def test_searching(self):
@@ -82,43 +88,3 @@ class TTD(unittest.TestCase):
         
         self.assertEqual(script.searching("sa"),
                          ("Salzburg, 5020, Österreich", 47.8028273, 13.057954916199))
-
-        
-##if __name__ == "__main__":
-##    pass
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
